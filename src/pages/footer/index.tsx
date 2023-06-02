@@ -13,7 +13,7 @@ const Footer = () => {
               MOATAZ OSMAN
             </p>
             <a
-              href="mailto:team@moatazmohamedahmed606@gmail.com"
+              href="mailto:moatazmohamedahmed606@gmail.com"
               className="text-yellow hover:text-deep-blue transition duration-500"
             >
               moatazmohamedahmed606@gmail.com
