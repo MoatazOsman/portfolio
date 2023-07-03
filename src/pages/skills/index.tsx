@@ -27,9 +27,9 @@ type Props = {
 const Skills = ({ setSelectedPage }: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const skillContainerStyles =
-    "flex flex-col items-center justify-between gap-3 rounded-2xl bg-gray-900 p-5 transition duration-500 hover:bg-red ";
+    "flex flex-col items-center justify-between gap-3 rounded-2xl bg-gray-900 p-5 transition duration-500 hover:bg-red w-full";
   
-  const skillStyles = 'flex md:basis-1/4 sm:max-w-[calc(50%-1rem)] sm:w-full sm:basis-4/4';
+  const skillStyles = 'flex md:basis-1/4 sm:max-w-[calc(50%-1rem)] w-full sm:basis-4/4';
     const containerVariant = {
     hidden: {},
     visible: {
