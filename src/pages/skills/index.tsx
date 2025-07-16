@@ -28,9 +28,10 @@ const Skills = ({ setSelectedPage }: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const skillContainerStyles =
     "flex flex-col items-center justify-between gap-3 rounded-2xl bg-gray-900 p-5 transition duration-500 hover:bg-red w-full";
-  
-  const skillStyles = 'flex md:basis-1/4 sm:max-w-[calc(50%-1rem)] w-full sm:basis-4/4';
-    const containerVariant = {
+
+  const skillStyles =
+    "flex md:basis-1/4 sm:max-w-[calc(50%-1rem)] w-full sm:basis-4/4";
+  const containerVariant = {
     hidden: {},
     visible: {
       transition: { staggerChildren: 0.3 },
@@ -178,7 +179,7 @@ const Skills = ({ setSelectedPage }: Props) => {
           variants={containerVariant}
           className="flex flex-col gap-8"
         >
-          <div className="flex md:flex-nowrap max-md:flex-wrap gap-8">
+          <div className="flex gap-8 max-md:flex-wrap md:flex-nowrap">
             <motion.div variants={skillVariant} className={skillStyles}>
               <div className={skillContainerStyles}>
                 <div className="flex h-full w-full items-center justify-center">
@@ -197,7 +198,7 @@ const Skills = ({ setSelectedPage }: Props) => {
             <motion.div variants={skillVariant} className={skillStyles}>
               <div className={skillContainerStyles}>
                 <div className="flex h-full w-full items-center justify-center">
-                  <div className="flex h-full basis-1/2 flex-col items-center justify- gap-5">
+                  <div className="justify- flex h-full basis-1/2 flex-col items-center gap-5">
                     <img
                       src={TypeScriptImage}
                       alt="TypeScript"
@@ -218,16 +219,15 @@ const Skills = ({ setSelectedPage }: Props) => {
             </motion.div>
 
             <motion.div variants={skillVariant} className={skillStyles}>
-
-            <div className={skillContainerStyles}>
+              <div className={skillContainerStyles}>
                 <div className="flex h-full w-full items-center justify-center">
                   <div className="flex h-full basis-1/2 flex-col items-center justify-between gap-5">
-                  <img src={IonicImage} alt="Ionic" className="w-1/2" />
+                    <img src={IonicImage} alt="Ionic" className="w-1/2" />
                     <p className=" font-semibold">Ionic</p>
                   </div>
                   <div className="flex h-full basis-1/2 flex-col items-center justify-between gap-5">
-                  <img src={FlutterImage} alt="Flutter" className="w-1/2" />
-                <p className=" font-semibold">Flutter</p>
+                    <img src={FlutterImage} alt="Flutter" className="w-1/2" />
+                    <p className=" font-semibold">Flutter</p>
                   </div>
                 </div>
               </div>
@@ -253,19 +253,21 @@ const Skills = ({ setSelectedPage }: Props) => {
             </motion.div>
           </div>
 
-          <div className="flex md:flex-nowrap max-md:flex-wrap gap-8">
+          <div className="flex gap-8 max-md:flex-wrap md:flex-nowrap">
             <motion.div variants={skillVariant} className={skillStyles}>
-
-
-            <div className={skillContainerStyles}>
+              <div className={skillContainerStyles}>
                 <div className="flex h-full w-full items-center justify-center">
                   <div className="flex h-full basis-1/2 flex-col items-center justify-between gap-5">
-                  <img src={NodeJSImage} alt="Node.js" className="w-1/2" />
-                <p className=" font-semibold">Node.js</p>
+                    <img src={NodeJSImage} alt="Node.js" className="w-1/2" />
+                    <p className=" font-semibold">Node.js</p>
                   </div>
                   <div className="flex h-full basis-1/2 flex-col items-center justify-between gap-5">
-                  <img src={NestJsImage} alt="NestJS" className="w-1/3 h-full justify-self-center" />
-                <p className=" font-semibold">NestJS</p>
+                    <img
+                      src={NestJsImage}
+                      alt="NestJS"
+                      className="h-full w-1/3 justify-self-center"
+                    />
+                    <p className=" font-semibold">NestJS</p>
                   </div>
                 </div>
               </div>
@@ -274,7 +276,7 @@ const Skills = ({ setSelectedPage }: Props) => {
             <motion.div variants={skillVariant} className={skillStyles}>
               <div className={skillContainerStyles}>
                 <div className="flex h-full w-full items-center justify-center">
-                <div className="flex h-full basis-1/2 flex-col items-center justify-between gap-5">
+                  <div className="flex h-full basis-1/2 flex-col items-center justify-between gap-5">
                     <img src={CssImage} alt="CSS" className="w-1/2" />
                     <p className=" font-semibold">CSS</p>
                   </div>
@@ -301,7 +303,7 @@ const Skills = ({ setSelectedPage }: Props) => {
                     <img
                       src={TailwindCssImage}
                       alt="Tainwindcss"
-                      className="w-1/2 h-full justify-self-center"
+                      className="h-full w-1/2 justify-self-center"
                     />
                     <p className=" font-semibold">Tainwindcss</p>
                   </div>
