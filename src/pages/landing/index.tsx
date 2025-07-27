@@ -57,22 +57,22 @@ const Landing = ({ setSelectedPage }: Props) => {
           <p className="z-10 whitespace-nowrap text-center font-playfair text-6xl md:order-1  md:text-start">
             Moataz {""}
             <span
-              className="z-20 before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]
-              xs:relative xs:font-semibold xs:text-deep-blue xs:before:content-brush whitespace-pre-line"
+              className="z-20 whitespace-pre-line before:absolute before:-left-[25px] before:-top-[70px]
+              before:z-[-1] xs:relative xs:font-semibold xs:text-deep-blue xs:before:content-brush"
             >
               Osman
             </span>
           </p>
 
-          <p className="mb-7 mt-10 text-center text-sm md:text-lg md:leading-8 leading-6 md:text-start">
+          <p className="mb-7 mt-10 text-center text-sm leading-6 md:text-start md:text-lg md:leading-8">
             <strong>Software developer</strong> (Frontend | Mobile) with more
-            than 6+ years experience in software development and i have a very
-            good knowledge in these fields (Ionic, Angular, Flutter, Capacitor,
-            Cordova, React.js, Fastlane, AngularJs, NodeJs, NestJs, Next.js,
+            than 7+ years experience in software development and i have a very
+            good knowledge in these fields (Angular, React.js, Next.js, Ionic,
+            Flutter, Capacitor, Cordova, Fastlane, AngularJs, NodeJs, NestJs,
             Javascript, ES6, Typescript, html, css, html5, css3, bootstrap,
             Tailwind CSS, Git, Jenkins, CircleCi, Rest API, MongoDB, MySQL,
-            Firebase, Netlify, Vercel, Heroku, Google Maps, Transit Maps, Fintech,
-            SEO)
+            Firebase, Netlify, Vercel, Heroku, Google Maps, Transit Maps,
+            Fintech, SEO)
           </p>
         </motion.div>
 
