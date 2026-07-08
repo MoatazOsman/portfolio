@@ -2,6 +2,36 @@ import { Experience, STORE } from "@/models/experience";
 
 export const EXPERIENCES: Experience[] = [
   {
+    date: "2026",
+    title: "Senior Software Engineer II",
+    companyName: "InTouch Technology",
+    companyRegion: "Qatar (Remote)",
+    description: `I'm working as a Staff Frontend Developer at InTouch Technology Company, where I built the Zourx platform and its client portal.
+        I have worked with Angular, Signals, React.js, Azure Pipelines, and Figma to deliver scalable, production-ready frontend experiences.`,
+    projects: [
+      {
+        title: "Zourx Platform",
+        description: `A modern web platform built for Zourx to deliver a seamless and scalable user experience across core business workflows.`,
+        stores: [
+          {
+            type: STORE.WEB,
+            url: "https://zourx.com/",
+          },
+        ],
+      },
+      {
+        title: "Zourx Client v2.0",
+        description: `A dedicated client-facing portal focused on improving user journey, usability, and performance for customer operations.`,
+        stores: [
+          {
+            type: STORE.WEB,
+            url: "https://zourx.com/client-v2.0",
+          },
+        ],
+      },
+    ],
+  },
+  {
     date: "2022",
     title: "Software Developer",
     companyName: "Avvocatoflash",
