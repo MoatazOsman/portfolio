@@ -1,7 +1,9 @@
+import type { ReactElement } from "react";
+
 export interface BenefitType {
-  icon: JSX.Element;
+  icon: ReactElement;
   title: string;
-  description: string
+  description: string;
 }
 
 export interface ClassType {

@@ -1,3 +1,5 @@
+"use client";
+
 import LineGradient from "@/components/lineGradient";
 import { motion } from "framer-motion";
 import AppStoreImage from "@/assets/appstore.svg";
@@ -8,9 +10,24 @@ import { EXPERIENCES } from "@/data/experience";
 import { STORE } from "@/models/experience";
 import { Fragment } from "react";
 import { SelectedPage } from "@/enums/selectedPage";
+import Image from "next/image";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
+};
+
+const storeImage = (type: STORE) => {
+  if (type === STORE.GOOGLE_PLAY) return GooglePlayImage;
+  if (type === STORE.APPSTORE) return AppStoreImage;
+  if (type === STORE.APP_GALLERY) return AppGalleryImage;
+  return WebImage;
+};
+
+const storeAlt = (type: STORE) => {
+  if (type === STORE.GOOGLE_PLAY) return "google-play";
+  if (type === STORE.APPSTORE) return "appstore";
+  if (type === STORE.APP_GALLERY) return "Huawei App Gallery";
+  return "web";
 };
 
 const Experience = ({ setSelectedPage }: Props) => {
@@ -34,10 +51,6 @@ const Experience = ({ setSelectedPage }: Props) => {
             EXPERIENCE
           </p>
           <LineGradient width="mx-auto w-2/4" />
-          {/* <p className="mt-10">
-          Here's What is My experience over the 6 past years until now for
-          different companies.
-        </p> */}
         </motion.div>
 
         <div className="p-16 max-sm:p-8">
@@ -56,12 +69,10 @@ const Experience = ({ setSelectedPage }: Props) => {
                   className="mb-20 flex flex-col"
                 >
                   <div className="flex flex-row gap-4 max-sm:flex-col">
-                    {/* Date */}
-                    <div className="flex h-5 items-center rounded-br-[50%] rounded-tr-[50%] bg-blue px-4 py-4 text-center max-sm:rounded-br-[0%] max-sm:rounded-tr-[0%] max-sm:justify-center max-sm:mb-[15px]">
+                    <div className="flex h-5 items-center rounded-br-[50%] rounded-tr-[50%] bg-blue px-4 py-4 text-center max-sm:mb-[15px] max-sm:justify-center max-sm:rounded-br-[0%] max-sm:rounded-tr-[0%]">
                       <p className="m-0 text-center">{experience.date}</p>
                     </div>
                     <div className="flex flex-col">
-                      {/* Position */}
                       <div className="flex flex-row items-center gap-8 max-sm:gap-4">
                         <div className="flex items-center">
                           <div className="h-[30px] w-[30px] rounded-full bg-yellow shadow-3xl shadow-yellow"></div>
@@ -70,7 +81,6 @@ const Experience = ({ setSelectedPage }: Props) => {
                           {experience.title}
                         </p>
                       </div>
-                      {/* Company and brief */}
                       <motion.div
                         initial="hidden"
                         whileInView="visible"
@@ -93,11 +103,10 @@ const Experience = ({ setSelectedPage }: Props) => {
                           <p className="mt-4 font-playfair text-lg font-semibold">
                             Projects: {experience.projects.length}
                           </p>
-                          {/* Projects */}
-                          {experience.projects.map((project, index) => {
+                          {experience.projects.map((project, projectIndex) => {
                             return (
                               <motion.ul
-                                key={`project-${index}`}
+                                key={`project-${projectIndex}`}
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true, amount: 0.5 }}
@@ -114,41 +123,28 @@ const Experience = ({ setSelectedPage }: Props) => {
                                   </span>
                                   {project.description}
 
-                                  {project.stores?.length && (
+                                  {!!project.stores?.length && (
                                     <div className="flex items-center gap-4">
                                       <p className="">view it on:</p>
-                                      {project.stores.map((store, index) => {
+                                      {project.stores.map((store, storeIndex) => {
                                         return (
                                           <a
-                                            key={`store-${index}`}
+                                            key={`store-${storeIndex}`}
                                             target="_blank"
+                                            rel="noreferrer"
                                             href={store.url}
-                                            className={`${store.type === STORE.WEB ? 'max-sm:w-[60px]' : ''}`}
+                                            className={`${
+                                              store.type === STORE.WEB
+                                                ? "max-sm:w-[60px]"
+                                                : ""
+                                            }`}
                                           >
-                                            <img
-                                              src={
-                                                store.type === STORE.GOOGLE_PLAY
-                                                  ? GooglePlayImage
-                                                  : store.type ===
-                                                    STORE.APPSTORE
-                                                  ? AppStoreImage
-                                                  : store.type ===
-                                                    STORE.APP_GALLERY
-                                                  ? AppGalleryImage
-                                                  : WebImage
-                                              }
-                                              alt={
-                                                store.type === STORE.GOOGLE_PLAY
-                                                  ? "google-play"
-                                                  : store.type ===
-                                                    STORE.APPSTORE
-                                                  ? "appstore"
-                                                  : store.type ===
-                                                    STORE.APP_GALLERY
-                                                  ? "Huawei App Gallery"
-                                                  : "web"
-                                              }
+                                            <Image
+                                              src={storeImage(store.type)}
+                                              alt={storeAlt(store.type)}
                                               width={100}
+                                              height={40}
+                                              className="h-auto w-[100px]"
                                             />
                                           </a>
                                         );

@@ -1,3 +1,5 @@
+"use client";
+
 import LineGradient from "@/components/lineGradient";
 import { motion } from "framer-motion";
 

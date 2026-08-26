@@ -1,7 +1,10 @@
+"use client";
+
 import linkedinIcon from "@/assets/linkedin.png";
 import facebookIcon from "@/assets/facebook.png";
 import githubIcon from "@/assets/github.png";
 import whatsAppIcon from "@/assets/whatsapp.png";
+import Image from "next/image";
 
 const SocialMediaIcons = () => {
   return (
@@ -12,7 +15,7 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <img src={linkedinIcon} alt="linkedin-link" />
+        <Image src={linkedinIcon} alt="linkedin-link" />
       </a>
 
       <a
@@ -21,7 +24,7 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <img className="invert" src={githubIcon} alt="github-link" />
+        <Image className="invert" src={githubIcon} alt="github-link" />
       </a>
 
       <a
@@ -30,7 +33,7 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <img src={facebookIcon} alt="facebook-link" />
+        <Image src={facebookIcon} alt="facebook-link" />
       </a>
 
       <a
@@ -39,7 +42,7 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <img className="invert" src={whatsAppIcon} alt="whatsapp-link" />
+        <Image className="invert" src={whatsAppIcon} alt="whatsapp-link" />
       </a>
     </div>
   );

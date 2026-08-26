@@ -1,9 +1,12 @@
+"use client";
+
 import { motion } from "framer-motion";
+import Image, { StaticImageData } from "next/image";
 
 type Props = {
   title: string;
   description: string;
-  coverImagePath: string;
+  coverImagePath: StaticImageData;
 };
 
 const Project = ({ title, description, coverImagePath }: Props) => {
@@ -27,7 +30,7 @@ const Project = ({ title, description, coverImagePath }: Props) => {
         <p className="mt-7">{description}</p>
       </div>
 
-      <img src={coverImagePath} alt={projectTitle} />
+      <Image src={coverImagePath} alt={projectTitle} />
     </motion.div>
   );
 };

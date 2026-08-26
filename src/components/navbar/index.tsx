@@ -1,8 +1,10 @@
+"use client";
+
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { SelectedPage } from "@/enums/selectedPage";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import Link from "../link/Link";
-import { useState } from "react";
+import { useState, type ReactElement } from "react";
 
 type Props = {
   isTopOfPage: boolean;
@@ -15,7 +17,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const [isMenusToggled, setIsMenuToggled] = useState(false);
   const navbarBg = isTopOfPage ? "" : "bg-red";
 
-  const links: JSX.Element = (
+  const links: ReactElement = (
     <>
       <Link
         page="Home"
@@ -28,11 +30,6 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      {/* <Link
-        page="Projects"
-        selectedPage={selectedPage}
-        setSelectedPage={setSelectedPage}
-      /> */}
       <Link
         page="Experiences"
         selectedPage={selectedPage}
@@ -58,12 +55,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           <button
             className=" rounded-full bg-red p-2"
             onClick={() => setIsMenuToggled(!isMenusToggled)}
+            aria-label="Open menu"
           >
             <Bars3Icon className="h-6 w-6 text-white" />
           </button>
         )}
-
-        {/* MOBILE MENU POPUP */}
 
         {!isDesktop && isMenusToggled && (
           <div className="fixed bottom-0 right-0 h-full w-[300px] bg-blue">
@@ -71,6 +67,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
               <button
                 className=" rounded-full  p-2"
                 onClick={() => setIsMenuToggled(!isMenusToggled)}
+                aria-label="Close menu"
               >
                 <XMarkIcon className="h-6 w-6 text-white" />
               </button>

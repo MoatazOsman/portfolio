@@ -1,6 +1,5 @@
 import SocialMediaIcons from "@/components/socialMediaIcons";
 
-
 const Footer = () => {
   return (
     <footer className="h-64 bg-red pt-10">
@@ -9,12 +8,12 @@ const Footer = () => {
 
         <div className="justify-center md:flex md:justify-between">
           <div className="max-md:text-center">
-            <p className="font-playfair text-2xl font-semibold text-yellow mb-3">
+            <p className="mb-3 font-playfair text-2xl font-semibold text-yellow">
               MOATAZ OSMAN
             </p>
             <a
               href="mailto:moatazmohamedahmed606@gmail.com"
-              className="text-yellow hover:text-deep-blue transition duration-500"
+              className="text-yellow transition duration-500 hover:text-deep-blue"
             >
               moatazmohamedahmed606@gmail.com
             </a>

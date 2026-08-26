@@ -1,8 +1,12 @@
+"use client";
+
 import LineGradient from "@/components/lineGradient";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import ContactImage from "@/assets/contact-image.jpeg";
 import { SelectedPage } from "@/enums/selectedPage";
+import Image from "next/image";
+import { FormEvent } from "react";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -15,7 +19,7 @@ const Contact = ({ setSelectedPage }: Props) => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (e: any) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     const isValid = await trigger();
     if (!isValid) {
       e.preventDefault();
@@ -58,7 +62,7 @@ const Contact = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <img src={ContactImage} alt="contact" />
+            <Image src={ContactImage} alt="contact" />
           </motion.div>
 
           <motion.div
@@ -72,7 +76,12 @@ const Contact = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <form target="_blank" onSubmit={onSubmit} action="https://formsubmit.co/343b4f8fb0224f81f7a71a6f4d7cd366" method="post">
+            <form
+              target="_blank"
+              onSubmit={onSubmit}
+              action="https://formsubmit.co/343b4f8fb0224f81f7a71a6f4d7cd366"
+              method="post"
+            >
               <input
                 className="w-full bg-blue p-3 font-semibold placeholder-opaque-black"
                 type="text"

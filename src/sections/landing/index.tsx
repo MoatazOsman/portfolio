@@ -1,12 +1,16 @@
+"use client";
+
 import { SelectedPage } from "@/enums/selectedPage";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import MoatazProfileImage from "@/assets/moataz.png";
 import { motion } from "framer-motion";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import SocialMediaIcons from "@/components/socialMediaIcons";
+import Image from "next/image";
+
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
+
 const Landing = ({ setSelectedPage }: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
@@ -24,24 +28,24 @@ const Landing = ({ setSelectedPage }: Props) => {
             className="relative z-0 ml-20 before:absolute before:-left-20 before:-top-20
           before:z-[-1] before:h-full before:w-full before:max-w-[400px] before:rounded-t-[400px] before:border-2 before:border-blue"
           >
-            <img
+            <Image
               className="z-10 w-full max-w-[400px] transition duration-500 hover:saturate-200
               hover:filter md:max-w-[600px]"
               src={MoatazProfileImage}
               alt="Profile Picture"
+              priority
             />
           </div>
         ) : (
-          <img
+          <Image
             className="z-10 w-full max-w-[400px] transition duration-500 hover:saturate-200
             hover:filter md:max-w-[600px]"
             src={MoatazProfileImage}
             alt="Profile Picture"
+            priority
           />
         )}
       </motion.div>
-
-      {/* MAIN SECTION */}
 
       <div className="z-30 mt-12 basis-2/5 md:mt-32">
         <motion.div
@@ -76,7 +80,6 @@ const Landing = ({ setSelectedPage }: Props) => {
           </p>
         </motion.div>
 
-        {/* Contact */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -88,23 +91,23 @@ const Landing = ({ setSelectedPage }: Props) => {
           }}
           className="mt-5 flex justify-center md:justify-start"
         >
-          <AnchorLink
+          <a
             className="rounded-sm bg-gradient-rainblue px-7 py-3 font-semibold text-deep-blue transition duration-500 hover:bg-blue hover:text-white"
             href="#contact"
             onClick={() => setSelectedPage(SelectedPage.Contact)}
           >
             Contact Me
-          </AnchorLink>
+          </a>
 
-          <AnchorLink
+          <a
             className=" rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
             href="#contact"
             onClick={() => setSelectedPage(SelectedPage.Contact)}
           >
             <div className="flex h-full w-full items-center justify-center bg-deep-blue px-10 font-playfair transition duration-500 hover:text-red">
-              Let's talk
+              Let&apos;s talk
             </div>
-          </AnchorLink>
+          </a>
         </motion.div>
 
         <motion.div>

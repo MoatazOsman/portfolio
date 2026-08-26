@@ -1,16 +1,18 @@
-import { useEffect, useState } from "react";
-import DotGroup from "./components/dotGroup";
-import Navbar from "./components/navbar";
-import { SelectedPage } from "./enums/selectedPage";
-import useMediaQuery from "./hooks/useMediaQuery";
-import Landing from "./pages/landing";
-import LineGradient from "./components/lineGradient";
-import Skills from "./pages/skills";
-import Contact from "./pages/contact";
-import Footer from "./pages/footer";
-import Experience from "./pages/experience";
+"use client";
 
-function App() {
+import { useEffect, useState } from "react";
+import DotGroup from "@/components/dotGroup";
+import Navbar from "@/components/navbar";
+import { SelectedPage } from "@/enums/selectedPage";
+import useMediaQuery from "@/hooks/useMediaQuery";
+import Landing from "@/sections/landing";
+import LineGradient from "@/components/lineGradient";
+import Skills from "@/sections/skills";
+import Contact from "@/sections/contact";
+import Footer from "@/sections/footer";
+import Experience from "@/sections/experience";
+
+export default function PortfolioShell() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
     SelectedPage.Home
   );
@@ -28,7 +30,6 @@ function App() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    // when component unmounted
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -52,19 +53,12 @@ function App() {
       <div className="mx-auto w-5/6">
         <Skills setSelectedPage={setSelectedPage} />
       </div>
-      {/* <LineGradient />
-      <div className="mx-auto w-5/6">
-        <Projects />
-      </div> */}
 
       <LineGradient />
       <div className="mx-auto w-5/6 max-md:w-full">
         <Experience setSelectedPage={setSelectedPage} />
       </div>
 
-      {/* <div className="mx-auto w-5/6 md:h-full">
-        <Testimonials />
-      </div> */}
       <LineGradient />
       <div className="mx-auto w-5/6 md:h-full">
         <Contact setSelectedPage={setSelectedPage} />
@@ -74,5 +68,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

@@ -1,6 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+const basePath = process.env.NODE_ENV === "production" ? "/portfolio" : "";
+
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./src/app/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./src/sections/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -12,24 +18,24 @@ module.exports = {
         "dark-grey": "#757575",
         "opaque-black": "rgba(0,0,0,0.35)",
       },
-      backgroundImage: (theme) => ({
+      backgroundImage: {
         "gradient-rainblue":
           "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%)",
-          "sila": "url('./assets/sila.webp')",
-      }),
+        sila: `url('${basePath}/assets/sila.webp')`,
+      },
       fontFamily: {
-        playfair: ["Playfair Display", "serif"],
-        opensans: ["Open Sans", "sans-serif"],
+        playfair: ["var(--font-playfair)", "serif"],
+        opensans: ["var(--font-opensans)", "sans-serif"],
       },
       content: {
-        brush: "url('./assets/brush.png')",
-        person1: "url('./assets/person-1.png')",
-        person2: "url('./assets/person-2.png')",
-        person3: "url('./assets/person-3.png')",
+        brush: `url('${basePath}/assets/brush.png')`,
+        person1: `url('${basePath}/assets/person-1.png')`,
+        person2: `url('${basePath}/assets/person-2.png')`,
+        person3: `url('${basePath}/assets/person-3.png')`,
       },
       boxShadow: {
-        '3xl': '0px 0px 20px rgb(253 204 73 / 0.3)',
-      }
+        "3xl": "0px 0px 20px rgb(253 204 73 / 0.3)",
+      },
     },
     screens: {
       xs: "480px",
