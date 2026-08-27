@@ -7,10 +7,9 @@ type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-const DotGroup = ({ selectedPage, setSelectedPage }: Props) => {
-  const selectedStyles = `relative bg-yellow before:absolute before:w-6 before:h-6 before:rounded-full
-    before:border-2 before:border-yellow before:left-[-50%] before:top-[-50%]`;
+const selectedStyles = `relative bg-yellow before:absolute before:left-[-50%] before:top-[-50%] before:h-6 before:w-6 before:rounded-full before:border-2 before:border-yellow`;
 
+const DotGroup = ({ selectedPage, setSelectedPage }: Props) => {
   const dots = [
     { page: SelectedPage.Home, label: "Home" },
     { page: SelectedPage.Skills, label: "Skills" },
@@ -19,17 +18,20 @@ const DotGroup = ({ selectedPage, setSelectedPage }: Props) => {
   ];
 
   return (
-    <div className="fixed right-7 top-[60%] z-30 flex flex-col gap-6 p-2">
+    <div className="fixed right-[max(0.5rem,env(safe-area-inset-right,0px))] top-[60%] z-30 flex flex-col">
       {dots.map(({ page, label }) => (
         <a
           key={page}
-          className={`${selectedPage === page ? selectedStyles : "bg-dark-grey"}
-       h-3 w-3 rounded-full`}
+          className="flex h-11 w-11 items-center justify-center"
           href={`#${page}`}
           onClick={() => setSelectedPage(page)}
           aria-label={label}
           aria-current={selectedPage === page ? "true" : undefined}
-        />
+        >
+          <span
+            className={`${selectedPage === page ? selectedStyles : "bg-dark-grey"} h-3 w-3 rounded-full`}
+          />
+        </a>
       ))}
     </div>
   );

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import DotGroup from "@/components/dotGroup";
 import Navbar from "@/components/navbar";
 import { SelectedPage } from "@/enums/selectedPage";
-import useMediaQuery from "@/hooks/useMediaQuery";
 import Landing from "@/sections/landing";
 import LineGradient from "@/components/lineGradient";
 import Skills from "@/sections/skills";
@@ -18,18 +17,21 @@ export default function PortfolioShell() {
   );
 
   const [isTopOfPage, setIsTopOfPage] = useState(true);
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      if (window.scrollY === 0) {
-        setIsTopOfPage(true);
-        setSelectedPage(SelectedPage.Home);
-      }
-      if (window.scrollY !== 0) setIsTopOfPage(false);
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const atTop = window.scrollY === 0;
+        setIsTopOfPage(atTop);
+        if (atTop) setSelectedPage(SelectedPage.Home);
+        ticking = false;
+      });
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -45,12 +47,12 @@ export default function PortfolioShell() {
       />
       <main>
         <div className="mx-auto w-5/6 md:h-full">
-          {isAboveMediumScreens && (
+          <div className="hidden md:block">
             <DotGroup
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-          )}
+          </div>
           <Landing setSelectedPage={setSelectedPage} />
         </div>
         <LineGradient />

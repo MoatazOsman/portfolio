@@ -113,7 +113,7 @@ export const EXPERIENCES: Experience[] = [
         stores: [
           {
             type: STORE.APPSTORE,
-            url: "https://shorturl.at/bqER5",
+            url: "https://apps.apple.com/us/app/sila/id1484452317?platform=iphone",
           },
           {
             type: STORE.GOOGLE_PLAY,

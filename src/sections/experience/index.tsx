@@ -68,22 +68,22 @@ const Experience = ({ setSelectedPage }: Props) => {
                 className="mb-20 flex flex-col"
               >
                 <div className="flex flex-row gap-4 max-sm:flex-col">
-                  <div className="flex h-5 items-center rounded-br-[50%] rounded-tr-[50%] bg-blue px-4 py-4 text-center max-sm:mb-[15px] max-sm:justify-center max-sm:rounded-br-[0%] max-sm:rounded-tr-[0%]">
+                  <div className="flex h-5 shrink-0 items-center rounded-br-[50%] rounded-tr-[50%] bg-blue px-4 py-4 text-center max-sm:mb-[15px] max-sm:justify-center max-sm:rounded-br-[0%] max-sm:rounded-tr-[0%]">
                     <p className="m-0 text-center font-semibold text-deep-blue">
                       {experience.date}
                     </p>
                   </div>
-                  <div className="flex flex-col">
+                  <div className="min-w-0 flex-1">
                     <div className="flex flex-row items-center gap-8 max-sm:gap-4">
-                      <div className="flex items-center">
+                      <div className="flex shrink-0 items-center">
                         <div className="h-[30px] w-[30px] rounded-full bg-yellow shadow-3xl shadow-yellow"></div>
                       </div>
-                      <h3 className="text-3xl font-semibold max-xs:text-2xl">
+                      <h3 className="min-w-0 break-words text-3xl font-semibold max-xs:text-2xl">
                         {experience.title}
                       </h3>
                     </div>
                     <div className="ml-[15px] mt-4 flex flex-row items-center border-l-2 border-white/40">
-                      <div className="ml-8 flex flex-col pl-[15px] max-sm:pl-[0px]">
+                      <div className="ml-8 min-w-0 flex-1 break-words pl-[15px] max-sm:pl-[0px]">
                         <p className="text-xl max-xs:text-lg">
                           {experience.companyName}, {experience.companyRegion}
                         </p>
@@ -118,7 +118,7 @@ const Experience = ({ setSelectedPage }: Props) => {
                                           rel="noreferrer"
                                           href={store.url}
                                           aria-label={label}
-                                          className="inline-flex shrink-0"
+                                          className="inline-flex h-11 min-w-[44px] shrink-0 items-center justify-center"
                                         >
                                           <Image
                                             src={storeImage(store.type)}

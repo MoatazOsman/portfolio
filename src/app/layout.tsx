@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Open_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
@@ -17,7 +17,13 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Moataz Osman",
   description:
-    "Frontend Engineer with 9+ years building scalable web and cross-platform applications — React, Next.js, Angular, TypeScript, and more.",
+    "Frontend and mobile engineer with 9+ years shipping production web and cross-platform applications — React, Next.js, Angular, TypeScript, and more.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({

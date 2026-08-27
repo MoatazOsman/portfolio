@@ -2,7 +2,7 @@
 
 import LineGradient from "@/components/lineGradient";
 import { motion } from "framer-motion";
-import SkillsImage from "@/assets/skills-image.png";
+import SkillsImage from "@/assets/skills-image.webp";
 import AngularImage from "@/assets/angular.svg";
 import JavascriptImage from "@/assets/javascript.svg";
 import FlutterImage from "@/assets/flutter.svg";
@@ -68,7 +68,7 @@ const skillPairs: SkillPair[] = [
 
 const Skills = ({ setSelectedPage }: Props) => {
   const skillContainerStyles =
-    "flex w-full flex-col items-center justify-between gap-3 rounded-2xl border border-blue/25 bg-navy p-5 transition duration-500 hover:border-red hover:bg-red-surface";
+    "flex w-full flex-col items-center justify-between gap-3 rounded-2xl border border-blue/25 bg-navy p-5 transition duration-500 hover:border-red hover:bg-red-surface active:border-red active:bg-red-surface";
   const skillStyles =
     "flex w-full sm:max-w-[calc(50%-1rem)] sm:basis-4/4 md:basis-1/4";
   const containerVariant = {
@@ -119,7 +119,12 @@ const Skills = ({ setSelectedPage }: Props) => {
             className="relative z-0 before:absolute before:-left-10 before:-top-10
           before:z-[-1] before:hidden before:h-full before:w-full before:border-2 before:border-blue md:ml-20 md:before:block"
           >
-            <Image className="z-10" src={SkillsImage} alt="" />
+            <Image
+              className="z-10 h-auto w-full"
+              src={SkillsImage}
+              alt=""
+              sizes="(min-width: 1060px) 50vw, 83vw"
+            />
           </div>
         </div>
       </motion.div>
@@ -149,7 +154,8 @@ const Skills = ({ setSelectedPage }: Props) => {
                         <Image
                           src={skill.src}
                           alt=""
-                          className={`w-1/2 ${skill.className ?? ""}`}
+                          className={`h-auto w-1/2 ${skill.className ?? ""}`}
+                          sizes="80px"
                         />
                         <p className="font-semibold">{skill.name}</p>
                       </div>
@@ -177,7 +183,8 @@ const Skills = ({ setSelectedPage }: Props) => {
                         <Image
                           src={skill.src}
                           alt=""
-                          className={`w-1/2 ${skill.className ?? ""}`}
+                          className={`h-auto w-1/2 ${skill.className ?? ""}`}
+                          sizes="80px"
                         />
                         <p className="font-semibold">{skill.name}</p>
                       </div>

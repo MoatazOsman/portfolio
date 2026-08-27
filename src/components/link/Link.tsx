@@ -16,7 +16,7 @@ const Link = ({ page, selectedPage, setSelectedPage, onNavigate }: Props) => {
   return (
     <a
       className={`${isSelected ? "text-yellow" : ""}
-       transition duration-500 hover:text-yellow`}
+       inline-flex min-h-11 min-w-11 items-center justify-center transition duration-500 hover:text-yellow`}
       href={`#${lowerCasePage}`}
       aria-current={isSelected ? "page" : undefined}
       onClick={() => {

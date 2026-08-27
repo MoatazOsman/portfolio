@@ -1,7 +1,7 @@
 "use client";
 
 import { SelectedPage } from "@/enums/selectedPage";
-import MoatazProfileImage from "@/assets/moataz.png";
+import MoatazProfileImage from "@/assets/moataz.webp";
 import { motion } from "framer-motion";
 import SocialMediaIcons from "@/components/socialMediaIcons";
 import LineGradient from "@/components/lineGradient";
@@ -12,11 +12,11 @@ type Props = {
 };
 
 const aboutParagraphs = [
-  "My core expertise is in React.js, Next.js, Angular, TypeScript, and JavaScript, with extensive experience designing and developing complex applications, reusable component architectures, and scalable frontend platforms.",
-  "I have hands-on experience with Frontend Architecture, Micro Frontends, Monorepo architectures, Design Systems, reusable component libraries, automated testing, CI/CD, performance optimization, and developer experience. I've worked on products across fintech, transportation, education, and experience management, including applications serving millions of users.",
-  "Throughout my career, I've also taken on technical leadership responsibilities — leading frontend developers, conducting code reviews, establishing engineering practices, making architectural decisions, and improving development and deployment processes. Some of my work has resulted in significant improvements, including reducing development effort by 50%+ through shared frontend architecture and reducing deployment time by 40%+ through CI/CD automation.",
-  "I'm currently expanding my expertise into Applied AI Engineering, focusing on how AI can be integrated into production applications and developer workflows. I'm particularly interested in LLM-powered applications, AI agents, tool calling, RAG, AI SDKs, and AI-assisted software development, while continuing to build on my strong foundation in frontend engineering.",
-  "I enjoy solving complex engineering problems, simplifying frontend architectures, improving developer productivity, and building products that are scalable, maintainable, and user-focused.",
+  "React.js, Next.js, Angular, TypeScript, and JavaScript — complex applications, reusable component systems, and scalable frontend platforms.",
+  "Frontend architecture, micro frontends, monorepos, design systems, component libraries, automated testing, CI/CD, and performance. Shipped work in fintech, transportation, legal-tech, and crypto.",
+  "I have led frontend developers, run code reviews, set engineering practices, and made architectural and delivery decisions on production teams.",
+  "I am expanding into applied AI in production apps and developer workflows — LLMs, agents, tool calling, RAG, and AI-assisted development — on top of frontend engineering.",
+  "I like hard engineering problems: simpler architectures, faster delivery, and products that stay maintainable.",
 ];
 
 const aboutClusters = [
@@ -40,11 +40,12 @@ const Landing = ({ setSelectedPage }: Props) => {
             before:z-[-1] before:hidden before:h-full before:w-full before:max-w-[400px] before:rounded-t-[400px] before:border-2 before:border-blue md:ml-20 md:before:block"
           >
             <Image
-              className="z-10 w-full max-w-[400px] transition duration-500 hover:saturate-200
+              className="z-10 h-auto w-full max-w-[400px] transition duration-500 hover:saturate-200
               hover:filter md:max-w-[600px]"
               src={MoatazProfileImage}
               alt="Moataz Osman"
               priority
+              sizes="(min-width: 1060px) 600px, 400px"
             />
           </div>
         </motion.div>
@@ -71,11 +72,9 @@ const Landing = ({ setSelectedPage }: Props) => {
             </h1>
 
             <p className="mb-7 mt-10 text-center text-sm leading-6 md:text-start md:text-lg md:leading-8">
-              I&apos;m a <strong>Frontend Engineer</strong> with 9+ years of
-              experience building scalable, high-performance web and
-              cross-platform applications, with a strong focus on frontend
-              architecture, modern web technologies, and engineering
-              excellence.
+              I&apos;m a <strong>frontend and mobile engineer</strong> with 9+
+              years shipping production web and cross-platform applications,
+              with a focus on frontend architecture.
             </p>
           </motion.div>
 
@@ -88,10 +87,10 @@ const Landing = ({ setSelectedPage }: Props) => {
               hidden: { opacity: 0, x: -50 },
               visible: { opacity: 1, x: 0 },
             }}
-            className="mt-5 flex justify-center md:justify-start"
+            className="mt-5 flex flex-wrap items-stretch justify-center md:justify-start"
           >
             <a
-              className="rounded-sm bg-gradient-rainblue px-7 py-3 font-semibold text-deep-blue transition duration-500 hover:bg-blue hover:text-white"
+              className="inline-flex min-h-11 items-center rounded-sm bg-gradient-rainblue px-5 py-3 font-semibold text-deep-blue transition duration-500 hover:bg-blue hover:text-white active:bg-blue active:text-white xs:px-7"
               href="#contact"
               onClick={() => setSelectedPage(SelectedPage.Contact)}
             >
@@ -103,7 +102,7 @@ const Landing = ({ setSelectedPage }: Props) => {
               href="#contact"
               onClick={() => setSelectedPage(SelectedPage.Contact)}
             >
-              <div className="flex h-full w-full items-center justify-center bg-deep-blue px-10 font-playfair transition duration-500 hover:text-red">
+              <div className="flex h-full min-h-11 w-full items-center justify-center bg-deep-blue px-6 font-playfair transition duration-500 hover:text-red active:text-red xs:px-10">
                 Let&apos;s talk
               </div>
             </a>
@@ -122,7 +121,7 @@ const Landing = ({ setSelectedPage }: Props) => {
           hidden: { opacity: 0, y: 24 },
           visible: { opacity: 1, y: 0 },
         }}
-        className="mt-5 grid w-full grid-cols-1 gap-x-6 gap-y-7 md:grid-cols-3"
+        className="mt-5 grid w-full grid-cols-1 gap-x-6 gap-y-7 sm:grid-cols-2 md:grid-cols-3"
       >
         {aboutClusters.map((cluster) => (
           <article key={cluster.title}>

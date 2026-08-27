@@ -16,7 +16,7 @@ A personal portfolio that lets a hiring visitor verify real products Moataz has 
 
 ## Positioning
 
-A working frontend and mobile engineer with 7+ years shipping production products — including African/MENA fintech (UBA, QIIB, Mahfazti), Qatar World Cup transit (SILA), Italian legal-tech (Avvocatoflash), crypto (Amon Wallet), and current Zourx platform work — not a generic template portfolio of sample apps.
+A working frontend and mobile engineer with 9+ years shipping production products — including African/MENA fintech (UBA, QIIB, Mahfazti), Qatar World Cup transit (SILA), Italian legal-tech (Avvocatoflash), crypto (Amon Wallet), and current Zourx platform work — not a generic template portfolio of sample apps.
 
 ## Operating Context
 
@@ -26,10 +26,10 @@ Single-page site, statically exported and hosted on GitHub Pages at `https://Moa
 
 Confirmed on the live page:
 
-- Identity (name, photo, role: Software developer — Frontend | Mobile)
+- Identity (name, photo, role: frontend and mobile engineer)
 - Skills grid (Angular, RxJS, TypeScript, JavaScript, Ionic, Flutter, React, Next.js, Node.js, NestJS, CSS, HTML, Bootstrap, Tailwind, CircleCI, Jenkins)
 - Experiences with live App Store, Google Play, AppGallery, and web links
-- Contact form (name, email, message) plus email, LinkedIn, GitHub, Facebook, WhatsApp
+- Contact form (name, email, message) plus email, LinkedIn, GitHub, and WhatsApp
 - Static Next.js export; production `basePath` is `/portfolio`
 
 Constraints:
@@ -43,14 +43,13 @@ Open (undecided):
 
 - Current open-to-work / availability status
 - Preferred location, timezone, or remote policy for a new role
-- Whether Facebook remains a hiring-relevant contact channel
 
 ## Brand Commitments
 
 - Name: Moataz Osman; nav mark: MO
 - Email: moatazmohamedahmed606@gmail.com
-- Profile photo: `src/assets/moataz.png`
-- Contact image: `src/assets/contact-image.jpeg`
+- Profile photo: `src/assets/moataz.webp`
+- Contact image: `src/assets/contact-image.webp`
 - LinkedIn: `http://www.linkedin.com/in/moataz-mohamed-ahmed/`
 - GitHub: `https://github.com/MoatazOsman`
 - WhatsApp: `https://wa.me/201068913918`
