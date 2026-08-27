@@ -13,10 +13,13 @@ module.exports = {
         "deep-blue": "#010026",
         blue: "#2CBCE9",
         red: "#DC4492",
+        "red-surface": "#9C3068",
         yellow: "#FDCC49",
         grey: "#ededed",
         "dark-grey": "#757575",
         "opaque-black": "rgba(0,0,0,0.35)",
+        mist: "#C4D2E8",
+        navy: "#0B1238",
       },
       backgroundImage: {
         "gradient-rainblue":
@@ -34,7 +37,7 @@ module.exports = {
         person3: `url('${basePath}/assets/person-3.png')`,
       },
       boxShadow: {
-        "3xl": "0px 0px 20px rgb(253 204 73 / 0.3)",
+        "3xl": "2px 8px 18px rgb(253 204 73 / 0.35)",
       },
     },
     screens: {

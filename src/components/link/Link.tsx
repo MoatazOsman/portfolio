@@ -6,16 +6,23 @@ type Props = {
   page: string;
   selectedPage: string;
   setSelectedPage: (value: SelectedPage) => void;
+  onNavigate?: () => void;
 };
 
-const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
+const Link = ({ page, selectedPage, setSelectedPage, onNavigate }: Props) => {
   const lowerCasePage = page.toLowerCase().replace(/ /g, "") as SelectedPage;
+  const isSelected = selectedPage === lowerCasePage;
+
   return (
     <a
-      className={`${selectedPage === lowerCasePage ? "text-yellow" : ""}
+      className={`${isSelected ? "text-yellow" : ""}
        transition duration-500 hover:text-yellow`}
       href={`#${lowerCasePage}`}
-      onClick={() => setSelectedPage(lowerCasePage)}
+      aria-current={isSelected ? "page" : undefined}
+      onClick={() => {
+        setSelectedPage(lowerCasePage);
+        onNavigate?.();
+      }}
     >
       {page}
     </a>

@@ -4,20 +4,20 @@ import "./globals.css";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
-  weight: ["400", "600"],
+  weight: ["400", "600", "700"],
   variable: "--font-opensans",
 });
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
-  weight: ["400", "600"],
+  weight: ["400", "600", "700"],
   variable: "--font-playfair",
 });
 
 export const metadata: Metadata = {
   title: "Moataz Osman",
   description:
-    "Software developer (Frontend | Mobile) portfolio — Angular, React, Next.js, Ionic, Flutter, and more.",
+    "Frontend Engineer with 9+ years building scalable web and cross-platform applications — React, Next.js, Angular, TypeScript, and more.",
 };
 
 export default function RootLayout({

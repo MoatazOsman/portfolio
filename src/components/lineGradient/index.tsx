@@ -6,7 +6,10 @@ type Props = {
 
 const LineGradient = ({width = 'w-full'}: Props) => {
   return (
-    <div className={`h-0.5 ${width} bg-gradient-rainblue`}></div>
+    <div
+      className={`h-0.5 ${width} bg-gradient-rainblue`}
+      aria-hidden="true"
+    />
   )
 }
 

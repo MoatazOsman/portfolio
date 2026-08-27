@@ -6,8 +6,7 @@ export const EXPERIENCES: Experience[] = [
     title: "Senior Software Engineer II",
     companyName: "InTouch Technology",
     companyRegion: "Qatar (Remote)",
-    description: `I'm working as a Staff Frontend Developer at InTouch Technology Company, where I built the Zourx platform and its client portal.
-        I have worked with Angular, Signals, React.js, Azure Pipelines, and Figma to deliver scalable, production-ready frontend experiences.`,
+    description: `I'm working as a Senior Software Engineer II at InTouch Technology, where I built the Zourx platform and its client portal. I have worked with Angular, Signals, React.js, Azure Pipelines, and Figma to deliver scalable, production-ready frontend experiences.`,
     projects: [
       {
         title: "Zourx Platform",
@@ -36,19 +35,11 @@ export const EXPERIENCES: Experience[] = [
     title: "Software Developer",
     companyName: "Avvocatoflash",
     companyRegion: "Italy (Remote)",
-    description: `I'm working as a software developer for AvvocatoFlash, a
-        company that specializes in providing legal services to law
-        firms and clients by connecting them with the best lawyers.
-        I have worked on various applications using different
-        technologies like (Ionic, Angular, Capacitor, Next.js,
-        Node.js, MongoDB, Fastlane, CircleCi).`,
+    description: `I worked as a software developer for AvvocatoFlash, a company that specializes in providing legal services to law firms and clients by connecting them with the best lawyers. I worked on applications using Ionic, Angular, Capacitor, Next.js, Node.js, MongoDB, Fastlane, and CircleCI.`,
     projects: [
       {
         title: "Avvocatoflash Lawyer app",
-        description: `A cross-platform app designed to increase the business of
-                the law firm by enabling lawyers to find new customers,
-                conduct video conferences with clients, digitally sign
-                legal documents, and offer other profitable features.`,
+        description: `A cross-platform app designed to increase the business of the law firm by enabling lawyers to find new customers, conduct video conferences with clients, digitally sign legal documents, and offer other profitable features.`,
         stores: [
           {
             type: STORE.APPSTORE,
@@ -77,11 +68,7 @@ export const EXPERIENCES: Experience[] = [
     title: "Software Developer",
     companyName: "Amon.Tech",
     companyRegion: "Estonia (Remote)",
-    description: `I'm working as a software developer for Amon.Tech, a
-        company that specializes in Blockchin and Crypto Currencies where user can Sell, buy and exchange Crypto in one place.
-        I have worked on various applications using different
-        technologies like (Ionic, Angular, Capacitor, Next.js,
-        Node.js, MongoDB, Fastlane, CircleCi).`,
+    description: `I worked as a software developer for Amon.Tech, a company that specializes in blockchain and cryptocurrencies where users can buy, sell, and exchange crypto in one place. I worked on applications using Ionic, Angular, Capacitor, Next.js, Node.js, MongoDB, Fastlane, and CircleCI.`,
     projects: [
       {
         title: "Amon Wallet",
@@ -103,7 +90,7 @@ export const EXPERIENCES: Experience[] = [
       },
       {
         title: "Amon Website",
-        description: `A static website with a plugged-in blog that provides users with profitable articles to read about the law, including updates on various legal cases and other useful features.`,
+        description: `The Amon.Tech site for the wallet and crypto products.`,
         stores: [
           {
             type: STORE.WEB,
@@ -118,15 +105,11 @@ export const EXPERIENCES: Experience[] = [
     title: "Fullstack Developer",
     companyName: "GBM (Gulf Business Machines)",
     companyRegion: "Maadi - Cairo",
-    description: `I'm working as a Full stack developer for GBM, a
-        company that provides different Solutions for entitiles and organizations.
-        I have worked on various applications using different
-        technologies like (IBM Mobile First, Ionic, Angular, TypeScript, Cordova, Nest.js,
-        Node.js, Jenkins, Fastlane, AWS EC2).`,
+    description: `I worked as a fullstack developer for GBM, a company that provides different solutions for entities and organizations. I worked on applications using IBM Mobile First, Ionic, Angular, TypeScript, Cordova, Nest.js, Node.js, Jenkins, Fastlane, and AWS EC2.`,
     projects: [
       {
         title: "SILA",
-        description: `A multi-platform app designed to facilitate visitors of World Cup 2022 in Qatar by helping them choose the best routes to stadiums, and allowing them to reserve their tickets for both the matches and public transportation`,
+        description: `A multi-platform app designed to facilitate visitors of World Cup 2022 in Qatar by helping them choose the best routes to stadiums, and allowing them to reserve their tickets for both the matches and public transportation.`,
         stores: [
           {
             type: STORE.APPSTORE,
@@ -144,8 +127,7 @@ export const EXPERIENCES: Experience[] = [
       },
       {
         title: "QIIB",
-        description: `A Mobile & web portal e-banking system designed for the Qatar International Islamic Bank, consisting of two main parts: retail and corporate systems.
-         The system facilitates transfers, bill payments, and salary batches operations for both domestic and international bank accounts.`,
+        description: `A mobile and web portal e-banking system designed for the Qatar International Islamic Bank, consisting of two main parts: retail and corporate systems. The system facilitates transfers, bill payments, and salary batch operations for both domestic and international bank accounts.`,
         stores: [
           {
             type: STORE.APPSTORE,
@@ -164,14 +146,11 @@ export const EXPERIENCES: Experience[] = [
     title: "Mobile Developer",
     companyName: "Vericash/ CIT Global",
     companyRegion: "Nasr City - Cairo",
-    description: `I'm working as a Mobile developer for Vericash, a
-        company that specializes in Fintech and providing digital financial solutions for south Africa and Arab Regions.
-        I have worked on various applications using different
-        technologies like (AngularJs, Cordova, OnsenUI, HTML, CSS, Less, NodeJs).`,
+    description: `I worked as a mobile developer for Vericash, a company that specializes in fintech and providing digital financial solutions for South Africa and Arab regions. I worked on applications using AngularJS, Cordova, OnsenUI, HTML, CSS, Less, and Node.js.`,
     projects: [
       {
         title: "UBA Mobile Banking",
-        description: `This mobile banking app is regarded as one of the best in Nigeria and South Africa and serves more than 20 countries in Africa. With over 5 million downloads on both Google Play Store and Apple Store, it has more than 2 million active users. I am proud to have been one of the main members who added new features to this app`,
+        description: `This mobile banking app is regarded as one of the best in Nigeria and South Africa and serves more than 20 countries in Africa. With over 5 million downloads on both Google Play Store and Apple Store, it has more than 2 million active users. I am proud to have been one of the main members who added new features to this app.`,
         stores: [
           {
             type: STORE.APPSTORE,

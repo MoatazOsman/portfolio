@@ -35,34 +35,39 @@ export default function PortfolioShell() {
 
   return (
     <div className="app">
+      <a className="skip-link" href="#home">
+        Skip to content
+      </a>
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      <div className="mx-auto w-5/6 md:h-full">
-        {isAboveMediumScreens && (
-          <DotGroup
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          />
-        )}
-        <Landing setSelectedPage={setSelectedPage} />
-      </div>
-      <LineGradient />
-      <div className="mx-auto w-5/6">
-        <Skills setSelectedPage={setSelectedPage} />
-      </div>
+      <main>
+        <div className="mx-auto w-5/6 md:h-full">
+          {isAboveMediumScreens && (
+            <DotGroup
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+          )}
+          <Landing setSelectedPage={setSelectedPage} />
+        </div>
+        <LineGradient />
+        <div className="mx-auto w-5/6">
+          <Skills setSelectedPage={setSelectedPage} />
+        </div>
 
-      <LineGradient />
-      <div className="mx-auto w-5/6 max-md:w-full">
-        <Experience setSelectedPage={setSelectedPage} />
-      </div>
+        <LineGradient />
+        <div className="mx-auto w-5/6 max-md:w-full">
+          <Experience setSelectedPage={setSelectedPage} />
+        </div>
 
-      <LineGradient />
-      <div className="mx-auto w-5/6 md:h-full">
-        <Contact setSelectedPage={setSelectedPage} />
-      </div>
+        <LineGradient />
+        <div className="mx-auto w-5/6 md:h-full">
+          <Contact setSelectedPage={setSelectedPage} />
+        </div>
+      </main>
 
       <Footer />
     </div>

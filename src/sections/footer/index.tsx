@@ -2,7 +2,7 @@ import SocialMediaIcons from "@/components/socialMediaIcons";
 
 const Footer = () => {
   return (
-    <footer className="h-64 bg-red pt-10">
+    <footer className="bg-red-surface py-10">
       <div className="mx-auto w-10/12">
         <SocialMediaIcons />
 
@@ -13,13 +13,13 @@ const Footer = () => {
             </p>
             <a
               href="mailto:moatazmohamedahmed606@gmail.com"
-              className="text-yellow transition duration-500 hover:text-deep-blue"
+              className="text-yellow transition duration-500 hover:text-white"
             >
               moatazmohamedahmed606@gmail.com
             </a>
           </div>
-          <p className="text-md font-playfair text-yellow max-md:text-center">
-            ©2023 OSMAN. All Rights Reserved.
+          <p className="text-md font-playfair text-yellow max-md:mt-4 max-md:text-center">
+            ©{new Date().getFullYear()} OSMAN. All Rights Reserved.
           </p>
         </div>
       </div>

@@ -11,11 +11,11 @@ const SocialMediaIcons = () => {
     <div className="my-10 flex justify-center gap-7 md:justify-start">
       <a
         className="transition duration-500 hover:opacity-50"
-        href="http://www.linkedin.com/in/moataz-mohamed-ahmed/"
+        href="https://www.linkedin.com/in/moataz-mohamed-ahmed/"
         target="_blank"
         rel="noreferrer"
       >
-        <Image src={linkedinIcon} alt="linkedin-link" />
+        <Image src={linkedinIcon} alt="LinkedIn" />
       </a>
 
       <a
@@ -24,7 +24,7 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <Image className="invert" src={githubIcon} alt="github-link" />
+        <Image className="invert" src={githubIcon} alt="GitHub" />
       </a>
 
       <a
@@ -33,7 +33,7 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <Image src={facebookIcon} alt="facebook-link" />
+        <Image src={facebookIcon} alt="Facebook" />
       </a>
 
       <a
@@ -42,7 +42,7 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <Image className="invert" src={whatsAppIcon} alt="whatsapp-link" />
+        <Image className="invert" src={whatsAppIcon} alt="WhatsApp" />
       </a>
     </div>
   );

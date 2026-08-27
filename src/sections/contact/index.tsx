@@ -6,28 +6,40 @@ import { useForm } from "react-hook-form";
 import ContactImage from "@/assets/contact-image.jpeg";
 import { SelectedPage } from "@/enums/selectedPage";
 import Image from "next/image";
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
+type ContactFormValues = {
+  name: string;
+  email: string;
+  message: string;
+};
+
+const fieldClassName =
+  "w-full bg-blue p-3 font-semibold text-deep-blue placeholder-deep-blue/70";
+
 const Contact = ({ setSelectedPage }: Props) => {
+  const [isSending, setIsSending] = useState(false);
   const {
     register,
     trigger,
     formState: { errors },
-  } = useForm();
+  } = useForm<ContactFormValues>();
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     const isValid = await trigger();
     if (!isValid) {
       e.preventDefault();
+      return;
     }
+    setIsSending(true);
   };
 
   return (
-    <section id="contact" className="py-48">
+    <section id="contact" className="scroll-mt-24 py-24 md:py-48">
       <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}>
         <motion.div
           className="flex w-full justify-end"
@@ -41,9 +53,9 @@ const Contact = ({ setSelectedPage }: Props) => {
           }}
         >
           <div>
-            <p className="font-playfair text-4xl font-semibold ">
+            <h2 className="font-playfair text-4xl font-semibold">
               <span className="text-yellow">CONTACT ME</span> TO GET STARTED
-            </p>
+            </h2>
             <div className="my-5 flex md:justify-end">
               <LineGradient width="w-1/2" />
             </div>
@@ -62,7 +74,7 @@ const Contact = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <Image src={ContactImage} alt="contact" />
+            <Image src={ContactImage} alt="Moataz Osman at a workstation" />
           </motion.div>
 
           <motion.div
@@ -81,26 +93,41 @@ const Contact = ({ setSelectedPage }: Props) => {
               onSubmit={onSubmit}
               action="https://formsubmit.co/343b4f8fb0224f81f7a71a6f4d7cd366"
               method="post"
+              noValidate
             >
+              <label htmlFor="name" className="sr-only">
+                Name
+              </label>
               <input
-                className="w-full bg-blue p-3 font-semibold placeholder-opaque-black"
+                id="name"
+                className={fieldClassName}
                 type="text"
                 placeholder="NAME"
+                autoComplete="name"
+                aria-invalid={errors.name ? "true" : "false"}
+                aria-describedby={errors.name ? "name-error" : undefined}
                 {...register("name", { required: true, maxLength: 100 })}
               />
 
               {errors.name && (
-                <p className="mt-1 text-red">
-                  {errors.name.type === "required" && "This field is required."}
+                <p id="name-error" className="mt-1 text-red">
+                  {errors.name.type === "required" && "Enter your name."}
                   {errors.name.type === "maxLength" &&
-                    "Max length is 100 char."}
+                    "Name must be 100 characters or fewer."}
                 </p>
               )}
 
+              <label htmlFor="email" className="sr-only">
+                Email
+              </label>
               <input
-                className="mt-5 w-full bg-blue p-3 font-semibold placeholder-opaque-black"
+                id="email"
+                className={`${fieldClassName} mt-5`}
                 type="email"
                 placeholder="EMAIL"
+                autoComplete="email"
+                aria-invalid={errors.email ? "true" : "false"}
+                aria-describedby={errors.email ? "email-error" : undefined}
                 {...register("email", {
                   required: true,
                   pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -108,35 +135,42 @@ const Contact = ({ setSelectedPage }: Props) => {
               />
 
               {errors.email && (
-                <p className="mt-1 text-red">
+                <p id="email-error" className="mt-1 text-red">
                   {errors.email.type === "required" &&
-                    "This field is required."}
-                  {errors.email.type === "pattern" && "Invalid email address."}
+                    "Enter your email address."}
+                  {errors.email.type === "pattern" &&
+                    "Enter a valid email address."}
                 </p>
               )}
 
+              <label htmlFor="message" className="sr-only">
+                Message
+              </label>
               <textarea
-                className="mt-5 w-full bg-blue p-3 font-semibold placeholder-opaque-black"
+                id="message"
+                className={`${fieldClassName} mt-5`}
                 placeholder="MESSAGE"
                 rows={4}
                 cols={5}
-                {...register("message", { required: true, maxLength: 200 })}
+                aria-invalid={errors.message ? "true" : "false"}
+                aria-describedby={errors.message ? "message-error" : undefined}
+                {...register("message", { required: true, maxLength: 2000 })}
               />
 
               {errors.message && (
-                <p className="mt-1 text-red">
-                  {errors.message.type === "required" &&
-                    "This field is required."}
+                <p id="message-error" className="mt-1 text-red">
+                  {errors.message.type === "required" && "Enter a message."}
                   {errors.message.type === "maxLength" &&
-                    "Max length is 200 char."}
+                    "Message must be 2,000 characters or fewer."}
                 </p>
               )}
 
               <button
                 type="submit"
-                className="mt-5 bg-yellow p-5 font-semibold text-deep-blue transition duration-500 hover:bg-red hover:text-white"
+                disabled={isSending}
+                className="mt-5 bg-yellow p-5 font-semibold text-deep-blue transition duration-500 hover:bg-red hover:text-white disabled:cursor-not-allowed disabled:opacity-70"
               >
-                SEND ME A MESSAGE
+                {isSending ? "SENDING…" : "SEND ME A MESSAGE"}
               </button>
             </form>
           </motion.div>
