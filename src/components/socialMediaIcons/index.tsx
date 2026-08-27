@@ -1,7 +1,7 @@
 "use client";
 
+import { EnvelopeIcon } from "@heroicons/react/24/solid";
 import linkedinIcon from "@/assets/linkedin.png";
-import facebookIcon from "@/assets/facebook.png";
 import githubIcon from "@/assets/github.png";
 import whatsAppIcon from "@/assets/whatsapp.png";
 import Image from "next/image";
@@ -29,11 +29,10 @@ const SocialMediaIcons = () => {
 
       <a
         className="transition duration-500 hover:opacity-50"
-        href="https://www.facebook.com/mezo.wiza/"
-        target="_blank"
-        rel="noreferrer"
+        href="mailto:moatazmohamedahmed606@gmail.com"
+        aria-label="Email"
       >
-        <Image src={facebookIcon} alt="Facebook" />
+        <EnvelopeIcon className="h-[30px] w-[30px]" />
       </a>
 
       <a
