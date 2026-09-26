@@ -2,7 +2,7 @@ import SocialMediaIcons from "@/components/socialMediaIcons";
 
 const Footer = () => {
   return (
-    <footer className="bg-red-surface pb-[max(2.5rem,env(safe-area-inset-bottom,0px))] pl-[env(safe-area-inset-left,0px)] pr-[env(safe-area-inset-right,0px)] pt-10">
+    <footer className="bg-red-surface pb-[max(7.5rem,calc(env(safe-area-inset-bottom,0px)+7.5rem))] pl-[env(safe-area-inset-left,0px)] pr-[max(1.5rem,env(safe-area-inset-right,0px))] pt-10">
       <div className="mx-auto w-10/12">
         <SocialMediaIcons />
 

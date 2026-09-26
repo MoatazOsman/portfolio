@@ -10,6 +10,7 @@ import Skills from "@/sections/skills";
 import Contact from "@/sections/contact";
 import Footer from "@/sections/footer";
 import Experience from "@/sections/experience";
+import AskMoatazWidget from "@/components/AskMoatazWidget/AskMoatazWidget";
 
 export default function PortfolioShell() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -72,6 +73,7 @@ export default function PortfolioShell() {
       </main>
 
       <Footer />
+      <AskMoatazWidget />
     </div>
   );
 }
