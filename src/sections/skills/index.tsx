@@ -31,6 +31,34 @@ type SkillPair = {
   right: { src: StaticImageData; name: string; className?: string };
 };
 
+const skillGroups: { title: string; items: string[] }[] = [
+  {
+    title: "Architecture",
+    items: [
+      "Micro Frontends",
+      "Monorepo",
+      "Design Systems",
+      "Component Libraries",
+    ],
+  },
+  {
+    title: "Data and services",
+    items: ["Microservices", "MySQL", "MongoDB", "SQLite"],
+  },
+  {
+    title: "Mobile delivery",
+    items: ["Capacitor", "Cordova"],
+  },
+  {
+    title: "Testing",
+    items: ["Jest", "Mocha", "Jasmine", "Cypress"],
+  },
+  {
+    title: "Release and cloud",
+    items: ["Fastlane", "GitHub Actions", "AWS", "Netlify", "Vercel"],
+  },
+];
+
 const skillPairs: SkillPair[] = [
   {
     left: { src: AngularImage, name: "Angular" },
@@ -110,7 +138,8 @@ const Skills = ({ setSelectedPage }: Props) => {
           </h2>
           <LineGradient width="w-1/3" />
           <p className="mb-7 mt-10 text-mist">
-            These are the tools I have used across 9+ years of production work.
+            Tools I use to design and deliver frontend, backend, and mobile
+            systems.
           </p>
         </motion.div>
 
@@ -195,6 +224,26 @@ const Skills = ({ setSelectedPage }: Props) => {
             ))}
           </div>
         </motion.div>
+      </div>
+
+      <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {skillGroups.map((group) => (
+          <div key={group.title}>
+            <h3 className="mb-3 font-playfair text-lg font-semibold text-yellow">
+              {group.title}
+            </h3>
+            <ul className="flex flex-wrap gap-2">
+              {group.items.map((item) => (
+                <li
+                  key={item}
+                  className="rounded-sm border border-blue/25 bg-navy px-3 py-2 text-sm font-semibold"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </section>
   );

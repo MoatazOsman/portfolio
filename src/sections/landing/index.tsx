@@ -12,19 +12,19 @@ type Props = {
 };
 
 const aboutParagraphs = [
-  "React.js, Next.js, Angular, TypeScript, and JavaScript — complex applications, reusable component systems, and scalable frontend platforms.",
-  "Frontend architecture, micro frontends, monorepos, design systems, component libraries, automated testing, CI/CD, and performance. Shipped work in fintech, transportation, legal-tech, and crypto.",
-  "I have led frontend developers, run code reviews, set engineering practices, and made architectural and delivery decisions on production teams.",
-  "I am expanding into applied AI in production apps and developer workflows — LLMs, agents, tool calling, RAG, and AI-assisted development — on top of frontend engineering.",
-  "I like hard engineering problems: simpler architectures, faster delivery, and products that stay maintainable.",
+  "I design architecture for web applications, backend services, and mobile products, choosing patterns that fit the business and carrying them through delivery.",
+  "React.js, Next.js, Angular, Node.js, NestJS, Ionic, Capacitor, and Flutter — shared across web, services, and cross-platform mobile.",
+  "Micro frontends, monorepos, design systems, microservices, automated testing, and CI/CD so products stay maintainable as they grow.",
+  "I set technical direction, mentor engineers, run code reviews, and work with product, design, and backend teams on production delivery.",
+  "I use AI-assisted development in real engineering workflows, and I have led delivery on an AI-driven experience platform.",
 ];
 
 const aboutClusters = [
-  { title: "Core stack", body: aboutParagraphs[0] },
-  { title: "Architecture", body: aboutParagraphs[1] },
-  { title: "Leadership", body: aboutParagraphs[2] },
-  { title: "Applied AI", body: aboutParagraphs[3] },
-  { title: "Focus", body: aboutParagraphs[4] },
+  { title: "Solution design", body: aboutParagraphs[0] },
+  { title: "Platforms", body: aboutParagraphs[1] },
+  { title: "Architecture", body: aboutParagraphs[2] },
+  { title: "Leadership", body: aboutParagraphs[3] },
+  { title: "Applied AI", body: aboutParagraphs[4] },
 ];
 
 const Landing = ({ setSelectedPage }: Props) => {
@@ -72,9 +72,9 @@ const Landing = ({ setSelectedPage }: Props) => {
             </h1>
 
             <p className="mb-7 mt-10 text-center text-sm leading-6 md:text-start md:text-lg md:leading-8">
-              I&apos;m a <strong>frontend and mobile engineer</strong> with 9+
-              years shipping production web and cross-platform applications,
-              with a focus on frontend architecture.
+              I design and architect production solutions across{" "}
+              <strong>frontend, backend, and mobile</strong>, with 10+ years
+              shipping systems end to end.
             </p>
           </motion.div>
 

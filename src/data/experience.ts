@@ -2,40 +2,11 @@ import { Experience, STORE } from "@/models/experience";
 
 export const EXPERIENCES: Experience[] = [
   {
-    date: "2026",
-    title: "Senior Software Engineer II",
-    companyName: "InTouch Technology",
-    companyRegion: "Qatar (Remote)",
-    description: `I'm working as a Senior Software Engineer II at InTouch Technology, where I built the Zourx platform and its client portal. I have worked with Angular, Signals, React.js, Azure Pipelines, and Figma to deliver scalable, production-ready frontend experiences.`,
-    projects: [
-      {
-        title: "Zourx Platform",
-        description: `A modern web platform built for Zourx to deliver a seamless and scalable user experience across core business workflows.`,
-        stores: [
-          {
-            type: STORE.WEB,
-            url: "https://zourx.com/",
-          },
-        ],
-      },
-      {
-        title: "Zourx Client v2.0",
-        description: `A dedicated client-facing portal focused on improving user journey, usability, and performance for customer operations.`,
-        stores: [
-          {
-            type: STORE.WEB,
-            url: "https://zourx.com/client-v2.0",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    date: "2022",
-    title: "Software Developer",
+    date: "Oct 2022 – Present",
+    title: "Senior Software Engineer",
     companyName: "Avvocatoflash",
     companyRegion: "Italy (Remote)",
-    description: `I worked as a software developer for AvvocatoFlash, a company that specializes in providing legal services to law firms and clients by connecting them with the best lawyers. I worked on applications using Ionic, Angular, Capacitor, Next.js, Node.js, MongoDB, Fastlane, and CircleCI.`,
+    description: `I work remotely as a senior software engineer, maintaining four web and mobile applications with Node.js, microservices, Angular, Ionic, Capacitor, React.js, and Next.js. I applied a monorepo with shared frontend code, cutting coding and testing time by more than 50%, and launched the lawyer mobile app with in-app purchases alongside the web app, increasing product sales by 35%. I also automated mobile and web releases with Fastlane and CircleCI to the App Store, Play Store, Huawei AppGallery, and Netlify.`,
     projects: [
       {
         title: "Avvocatoflash Lawyer app",
@@ -64,11 +35,40 @@ export const EXPERIENCES: Experience[] = [
     ],
   },
   {
-    date: "2021",
-    title: "Software Developer",
+    date: "Sep 2025 – Aug 2026",
+    title: "Technical Team Lead",
+    companyName: "Intouch Technology",
+    companyRegion: "Qatar (Remote)",
+    description: `I led the engineering team for Zourx, an AI-driven experience management platform, through technical direction, architecture, code reviews, and mentoring. I designed a scalable frontend architecture with React.js, Next.js, Angular, and micro frontends, modernized a legacy frontend, and published a shared design system as an NPM package. I worked with product, design, and backend teams, and used AI-assisted development to speed delivery.`,
+    projects: [
+      {
+        title: "Zourx Platform",
+        description: `A modern web platform built for Zourx to deliver a seamless and scalable user experience across core business workflows.`,
+        stores: [
+          {
+            type: STORE.WEB,
+            url: "https://zourx.com/",
+          },
+        ],
+      },
+      {
+        title: "Zourx Client v2.0",
+        description: `A dedicated client-facing portal focused on improving user journey, usability, and performance for customer operations.`,
+        stores: [
+          {
+            type: STORE.WEB,
+            url: "https://zourx.com/client-v2.0",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    date: "Jun 2021 – Sep 2022",
+    title: "Senior Software Developer",
     companyName: "Amon.Tech",
     companyRegion: "Estonia (Remote)",
-    description: `I worked as a software developer for Amon.Tech, a company that specializes in blockchain and cryptocurrencies where users can buy, sell, and exchange crypto in one place. I worked on applications using Ionic, Angular, Capacitor, Next.js, Node.js, MongoDB, Fastlane, and CircleCI.`,
+    description: `I led the frontend team on three applications using Node.js, microservices, Angular, Ionic, Capacitor, React.js, and Next.js, including Web3 integrations, blockchain contracts, and push notifications with OneSignal and Firebase. I improved CI/CD and cut deployment time by more than 40%, and established unit testing with Mocha, Jest, and Jasmine plus end-to-end testing with Cypress.`,
     projects: [
       {
         title: "Amon Wallet",
@@ -101,11 +101,11 @@ export const EXPERIENCES: Experience[] = [
     ],
   },
   {
-    date: "2019",
-    title: "Fullstack Developer",
+    date: "Jan 2019 – Jun 2021",
+    title: "Full Stack Engineer",
     companyName: "GBM (Gulf Business Machines)",
     companyRegion: "Maadi - Cairo",
-    description: `I worked as a fullstack developer for GBM, a company that provides different solutions for entities and organizations. I worked on applications using IBM Mobile First, Ionic, Angular, TypeScript, Cordova, Nest.js, Node.js, Jenkins, Fastlane, and AWS EC2.`,
+    description: `I worked as a full stack engineer, directing a frontend team while working with the backend team. I started 5+ projects across learning and education, fintech, and transportation using Angular, Ionic, Cordova, Capacitor, Node.js, Nest.js, MySQL, and AWS. I selected scalable patterns for each business case, configured Sentry, set up Jenkins and GitHub CI/CD to AWS EC2, the App Store, and Play Store, and introduced unit testing with Mocha and Jasmine.`,
     projects: [
       {
         title: "SILA",
@@ -142,15 +142,15 @@ export const EXPERIENCES: Experience[] = [
     ],
   },
   {
-    date: "2017",
+    date: "Oct 2017 – Dec 2018",
     title: "Mobile Developer",
     companyName: "Vericash/ CIT Global",
     companyRegion: "Nasr City - Cairo",
-    description: `I worked as a mobile developer for Vericash, a company that specializes in fintech and providing digital financial solutions for South Africa and Arab regions. I worked on applications using AngularJS, Cordova, OnsenUI, HTML, CSS, Less, and Node.js.`,
+    description: `I contributed to three scalable fintech applications using Android native, Cordova, Angular.js, and Node.js. One of them served over 2 million active users. I automated the build process, cutting build time by 40%, and received the Project Hero award. After six months I was promoted to a senior role and supervised a team of three developers.`,
     projects: [
       {
         title: "UBA Mobile Banking",
-        description: `This mobile banking app is regarded as one of the best in Nigeria and South Africa and serves more than 20 countries in Africa. With over 5 million downloads on both Google Play Store and Apple Store, it has more than 2 million active users. I am proud to have been one of the main members who added new features to this app.`,
+        description: `This mobile banking app is regarded as one of the best in Nigeria and South Africa and serves more than 20 countries in Africa. It had more than 2 million active users. I am proud to have been one of the main members who added new features to this app.`,
         stores: [
           {
             type: STORE.APPSTORE,
@@ -177,5 +177,21 @@ export const EXPERIENCES: Experience[] = [
         ],
       },
     ],
+  },
+  {
+    date: "Dec 2017 – Present",
+    title: "Freelancer",
+    companyName: "Mostaql",
+    companyRegion: "mostaql.com",
+    description: `I provide freelance software development across varied applications and business workflows, with a 5-star rating. Technologies include React.js, TypeScript, Angular, Flutter, Ionic, Capacitor, Cordova, Sass, Node.js, and MongoDB.`,
+    projects: [],
+  },
+  {
+    date: "Jun 2016 – Jun 2017",
+    title: "Android Developer",
+    companyName: "Watania co. for roads",
+    companyRegion: "Nasr City - Cairo",
+    description: `I delivered two Android applications for road-permission ticketing, integrating Bixolon printers with Android devices over Bluetooth for outlets without electricity.`,
+    projects: [],
   },
 ];

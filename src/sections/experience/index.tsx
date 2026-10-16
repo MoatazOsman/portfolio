@@ -68,8 +68,8 @@ const Experience = ({ setSelectedPage }: Props) => {
                 className="mb-20 flex flex-col"
               >
                 <div className="flex flex-row gap-4 max-sm:flex-col">
-                  <div className="flex h-5 shrink-0 items-center rounded-br-[50%] rounded-tr-[50%] bg-blue px-4 py-4 text-center max-sm:mb-[15px] max-sm:justify-center max-sm:rounded-br-[0%] max-sm:rounded-tr-[0%]">
-                    <p className="m-0 text-center font-semibold text-deep-blue">
+                  <div className="flex h-auto shrink-0 items-center self-start rounded-r-full bg-blue px-4 py-2 text-center max-sm:mb-[15px] max-sm:w-full max-sm:justify-center max-sm:rounded-none">
+                    <p className="m-0 whitespace-nowrap text-center text-sm font-semibold text-deep-blue">
                       {experience.date}
                     </p>
                   </div>
@@ -91,9 +91,11 @@ const Experience = ({ setSelectedPage }: Props) => {
                           {experience.description}
                         </p>
 
-                        <p className="mt-4 font-playfair text-lg font-semibold">
-                          Projects: {experience.projects.length}
-                        </p>
+                        {experience.projects.length > 0 && (
+                          <p className="mt-4 font-playfair text-lg font-semibold">
+                            Projects: 
+                          </p>
+                        )}
                         {experience.projects.map((project, projectIndex) => {
                           return (
                             <ul

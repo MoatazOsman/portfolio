@@ -17,7 +17,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Moataz Osman",
   description:
-    "Frontend and mobile engineer with 9+ years shipping production web and cross-platform applications — React, Next.js, Angular, TypeScript, and more.",
+    "Software engineer who designs and architects production solutions across frontend, backend, and mobile — 10+ years with React, Next.js, Angular, Node.js, and cross-platform apps.",
 };
 
 export const viewport: Viewport = {
